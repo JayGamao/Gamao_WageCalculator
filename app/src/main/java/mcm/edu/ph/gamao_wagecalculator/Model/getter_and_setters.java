@@ -25,10 +25,7 @@ public class getter_and_setters {
         return wage;
     }
     public void setwage(int wage) { this.wage = wage; }
-    public int getformulas() {
-        return formulas;
-    }
-    public void setformulas(int formulas) { this.formulas = formulas; }
+
     public int gettotalwage() {
         return totalwage;
     }
@@ -57,9 +54,6 @@ public class getter_and_setters {
         return Hours;
     }
     public void setHours(int Hours) { this.Hours = Hours; }
-    public int getformulanum() { return formulanum; }
-    public void setformulanum(int formulanum ) { this.formulanum = formulanum; }
-
 
 }
 

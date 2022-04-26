@@ -57,11 +57,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-
-
-
-
-
         //onclicklistener
         Name.setOnClickListener(this);
         btnRates.setOnClickListener(this);
