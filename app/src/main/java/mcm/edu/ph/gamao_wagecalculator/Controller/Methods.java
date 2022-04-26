@@ -50,7 +50,7 @@ public  Methods(){
         rates.setVisibility(View.VISIBLE);
         btnX.setVisibility(View.VISIBLE);
     }
-    public void finalScreen(getter_and_setters g,TextView txt1, EditText Name, EditText hours, Button btnRates,Button btnX,Button btnRegular,Button btnProbational,Button btnPartTime, ImageView rates, TextView txt2, TextView txt3, TextView txt4, TextView txt5, TextView txt6, TextView wage, TextView overTimeWage, TextView hoursWorked, TextView overTimeHours, TextView totalWage) {
+    public void finalScreen(getter_and_setters g,TextView txt1, EditText Name, EditText hours, Button btnRates,Button btnX,Button btnRegular,Button btnProbational,Button btnPartTime, ImageView rates, TextView txt2, TextView txt3, TextView txt4, TextView txt5, TextView txt6, TextView wage, TextView overTimeWage, TextView hoursWorked, TextView overTimeHours, TextView totalWage, TextView nameandstatus) {
         hide1st(txt1, Name, hours, btnRates, btnX, btnRegular, btnPartTime, btnProbational, rates);
         txt2.setVisibility(View.VISIBLE);
         txt3.setVisibility(View.VISIBLE);
@@ -62,7 +62,9 @@ public  Methods(){
         hoursWorked.setVisibility(View.VISIBLE);
         overTimeHours.setVisibility(View.VISIBLE);
         totalWage.setVisibility(View.VISIBLE);
+        nameandstatus.setVisibility(View.VISIBLE);
         g.setHours(Integer.parseInt(hours.getText().toString()));
+        g.setname(String.valueOf(Name.getText().toString()));
         switch (g.gettype()) {
             case 1:
                 if (g.getHours()>8) {
@@ -77,6 +79,7 @@ public  Methods(){
                 g.sethoursworked(g.getHours());
                 Log.d(TAG, "formula 2");
             }
+                nameandstatus.setText("Regular : " + String.valueOf(g.getname()));
         break;
             case 2:
                 if (g.getHours() > 8) {
@@ -90,6 +93,7 @@ public  Methods(){
                     g.settotalwage(g.getwage()+ g.getovertimewage());
                     g.sethoursworked(g.getHours());
                 }
+                nameandstatus.setText("Part-Time : " + (g.getname()));
                 break;
             case 3:
                 if (g.getHours()>8) {
@@ -104,6 +108,7 @@ public  Methods(){
                     g.sethoursworked(g.getHours());
                     Log.d(TAG, "formula 1");
                 }
+                nameandstatus.setText("Probational : " + (g.getname()));
                 break;
         }
     }
@@ -117,7 +122,10 @@ public  Methods(){
         btnPartTime.setVisibility(View.INVISIBLE);
         rates.setVisibility(View.INVISIBLE);
         btnX.setVisibility(View.INVISIBLE);
-}}
+}
+
+
+            }
 
 
 

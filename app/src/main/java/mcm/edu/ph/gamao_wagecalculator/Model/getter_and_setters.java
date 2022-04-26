@@ -12,7 +12,6 @@ public class getter_and_setters {
     int regularWage = 800;
     String name;
     int Hours ;
-    int formulanum;
 
 
 
