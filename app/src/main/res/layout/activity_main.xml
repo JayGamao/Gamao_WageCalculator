@@ -138,6 +138,7 @@
         android:ems="10"
         android:fontFamily="sans-serif"
         android:hint="Name"
+        android:inputType="text"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
